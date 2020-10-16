@@ -112,7 +112,7 @@
 
                 // bind touchstart event to store start position of touch
                 el.addEventListener('touchstart', e => {
-                    if (el.scrollTop === 0) {
+                    if (el.getBoundingClientRect().top === 0) {
                         this.canPull = true;
                     } else {
                         this.canPull = false;
